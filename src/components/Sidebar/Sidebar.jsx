@@ -49,16 +49,34 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
       <List>
         <ListSubheader>Categories</ListSubheader>
-        {demoCategories.map(({ label, value }) => (
+        {Categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem onClick={() => {}} button>
-              <ListItemIcon>
+              {/* <ListItemIcon>
                 <img
                   src={blueLogo}
                   className={classes.genreImages}
                   height={30}
                 />
-              </ListItemIcon>
+              </ListItemIcon> */}
+              <ListItemText primary={label} />
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        <ListSubheader>Genres</ListSubheader>
+        {demoCategories.map(({ label, value }) => (
+          <Link key={value} className={classes.links} to="/">
+            <ListItem onClick={() => {}} button>
+              {/* <ListItemIcon>
+                <img
+                  src={blueLogo}
+                  className={classes.genreImages}
+                  height={30}
+                />
+              </ListItemIcon> */}
               <ListItemText primary={label} />
             </ListItem>
           </Link>
