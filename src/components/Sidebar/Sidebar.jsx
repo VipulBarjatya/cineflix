@@ -26,10 +26,10 @@ const Sidebar = ({ setMobileOpen }) => {
 
   return (
     <>
-      <Link to="/" className={ClassNames.imageLink}>
+      <Link to="/" className={classes.imageLink}>
         <img
           className={classes.image}
-          src={theme.palette.mode === 'light' ? redLogo : blueLogo}
+          src={theme.palette.mode === 'light' ? blueLogo : redLogo}
           alt="Cineflix logo"
         />
       </Link>
